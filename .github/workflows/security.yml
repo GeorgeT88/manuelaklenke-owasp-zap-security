@@ -1,0 +1,62 @@
+name: OWASP ZAP Security Scan
+
+run-name: >-
+  ${{ github.event_name == 'workflow_dispatch' && 'OWASP ZAP Security Scan — manual run' ||
+      github.event_name == 'repository_dispatch' && 'OWASP ZAP Security Scan — triggered by Vercel deploy' ||
+      github.event_name == 'schedule' && 'OWASP ZAP Security Scan — nightly run' ||
+      'OWASP ZAP Security Scan' }}
+
+on:
+  repository_dispatch:
+    types: [vercel-deploy]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  zap-scan:
+    name: OWASP ZAP Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run OWASP ZAP Full Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'https://manuelaklenke.com'
+          fail_action: false
+          allow_issue_writing: false
+          report_html: zap-report.html
+          report_json: zap-report.json
+          report_md: zap-report.md
+
+      - name: Prepare report for GitHub Pages
+        if: always()
+        run: |
+          mkdir -p zap-pages
+          cp zap-report.html zap-pages/index.html
+          touch zap-pages/.nojekyll
+
+      - name: Write security scan summary
+        if: always()
+        run: |
+          echo "## OWASP ZAP Security Scan Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Target:** https://manuelaklenke.com" >> $GITHUB_STEP_SUMMARY
+          echo "**Scan type:** Full scan (active + passive)" >> $GITHUB_STEP_SUMMARY
+          echo "**Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 [View full ZAP report](https://georget88.github.io/manuelaklenke-owasp-zap-security/)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Publish ZAP report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./zap-pages
+          destination_dir: .
