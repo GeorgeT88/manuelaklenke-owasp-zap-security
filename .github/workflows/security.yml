@@ -2,13 +2,10 @@ name: OWASP ZAP Security Scan
 
 run-name: >-
   ${{ github.event_name == 'workflow_dispatch' && 'OWASP ZAP Security Scan — manual run' ||
-      github.event_name == 'repository_dispatch' && 'OWASP ZAP Security Scan — triggered by Vercel deploy' ||
       github.event_name == 'schedule' && 'OWASP ZAP Security Scan — nightly run' ||
       'OWASP ZAP Security Scan' }}
 
 on:
-  repository_dispatch:
-    types: [vercel-deploy]
   workflow_dispatch:
   schedule:
     - cron: '0 7 * * *'
