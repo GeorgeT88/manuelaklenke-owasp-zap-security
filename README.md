@@ -1,6 +1,6 @@
 # <img src="https://cdn.simpleicons.org/owasp/3399CC" height="32" align="center" /> OWASP ZAP Security Scan — manuelaklenke.com
 
-Automated security scan for [manuelaklenke.com](https://manuelaklenke.com) using OWASP ZAP. Runs a full active + passive scan after every deployment and publishes the report to GitHub Pages.
+Automated security scan for [manuelaklenke.com](https://manuelaklenke.com) using OWASP ZAP. Runs a full active + passive scan on demand or on a nightly schedule and publishes the report to GitHub Pages.
 
 ---
 
@@ -37,21 +37,17 @@ ZAP full scan covers both passive and active testing:
 
 ## ⚙️ CI/CD Pipeline
 
-The scan is triggered automatically after every push to `main` in [GeorgeT88/manuelaklenke-web](https://github.com/GeorgeT88/manuelaklenke-web), once the Vercel production deployment is confirmed live:
+ZAP is **not** triggered on every deployment — active scanning generates significant traffic and takes up to 60 minutes. Instead it runs on a nightly schedule or manually on demand.
+
+It appears as a skipped (grey) box in the [manuelaklenke-web](https://github.com/GeorgeT88/manuelaklenke-web) CI pipeline for visibility, but does not auto-execute.
 
 ```
-📦 Push to manuelaklenke-web
-        ↓
-⏳ Vercel deployment confirmed live
-        ↓
-⚡ repository_dispatch: vercel-deploy
-        ↓
 🔍 ZAP full scan against https://manuelaklenke.com
         ↓
 📊 HTML report published to GitHub Pages
 ```
 
-The scan can also be triggered manually from **Actions → OWASP ZAP Security Scan → Run workflow**, and runs on a nightly schedule at **07:00 UTC**.
+Trigger manually from **Actions → OWASP ZAP Security Scan → Run workflow**, or wait for the nightly schedule at **07:00 UTC**.
 
 ---
 
@@ -59,6 +55,5 @@ The scan can also be triggered manually from **Actions → OWASP ZAP Security Sc
 
 | Trigger | Run name |
 |---|---|
-| Push via app repo | `OWASP ZAP Security Scan — triggered by Vercel deploy` |
 | Manual | `OWASP ZAP Security Scan — manual run` |
 | Nightly schedule (07:00 UTC) | `OWASP ZAP Security Scan — nightly run` |
