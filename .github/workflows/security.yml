@@ -33,23 +33,11 @@ jobs:
           fail_action: false
           allow_issue_writing: false
           artifact_name: zap-scan-report
-          report_html: zap-report.html
-          report_json: zap-report.json
-          report_md: zap-report.md
-
-      - name: List workspace files after ZAP scan
-        if: always()
-        run: ls -la $GITHUB_WORKSPACE
-
       - name: Prepare report for GitHub Pages
         if: always()
         run: |
           mkdir -p zap-pages
-          if [ -f "zap-report.html" ]; then
-            cp zap-report.html zap-pages/index.html
-          else
-            echo "<h1>ZAP report unavailable</h1><p>The scan did not produce a report.</p>" > zap-pages/index.html
-          fi
+          cp report_html.html zap-pages/index.html
           touch zap-pages/.nojekyll
 
       - name: Write security scan summary
