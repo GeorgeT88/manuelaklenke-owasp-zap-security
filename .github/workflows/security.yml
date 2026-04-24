@@ -37,6 +37,10 @@ jobs:
           report_json: zap-report.json
           report_md: zap-report.md
 
+      - name: List workspace files after ZAP scan
+        if: always()
+        run: ls -la $GITHUB_WORKSPACE
+
       - name: Prepare report for GitHub Pages
         if: always()
         run: |
