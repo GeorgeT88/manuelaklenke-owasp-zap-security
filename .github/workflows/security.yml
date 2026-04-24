@@ -27,10 +27,12 @@ jobs:
 
       - name: Run OWASP ZAP Full Scan
         uses: zaproxy/action-full-scan@v0.10.0
+        continue-on-error: true
         with:
           target: 'https://manuelaklenke.com'
           fail_action: false
           allow_issue_writing: false
+          artifact_name: zap-scan-report
           report_html: zap-report.html
           report_json: zap-report.json
           report_md: zap-report.md
@@ -39,7 +41,11 @@ jobs:
         if: always()
         run: |
           mkdir -p zap-pages
-          cp zap-report.html zap-pages/index.html
+          if [ -f "zap-report.html" ]; then
+            cp zap-report.html zap-pages/index.html
+          else
+            echo "<h1>ZAP report unavailable</h1><p>The scan did not produce a report.</p>" > zap-pages/index.html
+          fi
           touch zap-pages/.nojekyll
 
       - name: Write security scan summary
