@@ -218,7 +218,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Mon, 17 Aug 2026 07:57:31
+		Generated on Tue, 18 Aug 2026 07:43:36
 	</h3>
 
 	<h3>
@@ -251,7 +251,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -308,7 +308,7 @@ td {
 					<div>ZAP warnings logged - see the zap.log file for details</div>
 				</td>
 				<td align="center">
-					<div>9   </div>
+					<div>8   </div>
 				</td>
 				</tr>
 			
@@ -362,7 +362,7 @@ td {
 					<div>Percentage of responses with status code 2xx</div>
 				</td>
 				<td align="center">
-					<div>86 %</div>
+					<div>70 %</div>
 				</td>
 				</tr>
 			
@@ -389,7 +389,7 @@ td {
 					<div>Info</div>
 				</td>
 				<td>
-					<div>Informational</div>
+					<div>Exceeded Low</div>
 				</td>
 				<td>
 					<div>https://manuelaklenke.com</div>
@@ -398,7 +398,7 @@ td {
 					<div>Percentage of responses with status code 4xx</div>
 				</td>
 				<td align="center">
-					<div>12 %</div>
+					<div>28 %</div>
 				</td>
 				</tr>
 			
@@ -560,7 +560,7 @@ td {
 					<div>Percentage of slow responses</div>
 				</td>
 				<td align="center">
-					<div>1 %</div>
+					<div>2 %</div>
 				</td>
 				</tr>
 			
@@ -596,7 +596,7 @@ td {
 					<div>Percentage of slow responses</div>
 				</td>
 				<td align="center">
-					<div>76 %</div>
+					<div>92 %</div>
 				</td>
 				</tr>
 			
@@ -650,7 +650,7 @@ td {
 					<div>Percentage of slow responses</div>
 				</td>
 				<td align="center">
-					<div>33 %</div>
+					<div>53 %</div>
 				</td>
 				</tr>
 			
@@ -680,14 +680,6 @@ td {
 					align="center">Risk Level</th>
 				<th width="20%"
 					align="center">Number of Instances</th>
-			</tr>
-			<tr>
-				<td><a href="#40040">CORS Misconfiguration</a></td>
-				<td align="center" class="risk-2">Medium</td>
-				
-				<td align="center">Systemic</td>
-				
-				
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: script-src unsafe-inline</a></td>
@@ -741,16 +733,16 @@ td {
 				<td><a href="#90004">Cross-Origin-Embedder-Policy Header Missing or Invalid</a></td>
 				<td align="center" class="risk-1">Low</td>
 				
+				<td align="center">Systemic</td>
 				
-				<td align="center">5</td>
 				
 			</tr>
 			<tr>
 				<td><a href="#90004">Cross-Origin-Opener-Policy Header Missing or Invalid</a></td>
 				<td align="center" class="risk-1">Low</td>
 				
+				<td align="center">Systemic</td>
 				
-				<td align="center">5</td>
 				
 			</tr>
 			<tr>
@@ -799,251 +791,6 @@ td {
 
 	
 		<h3>Alert Detail</h3>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-2"><a
-						id="40040"></a>
-						<div>Medium</div></th>
-					<th class="risk-2">CORS Misconfiguration</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>This CORS misconfiguration could allow an attacker to perform AJAX queries to the vulnerable website from a malicious page loaded by the victim&#39;s user agent.</div>
-							<br />
-						
-							<div>In order to perform authenticated AJAX queries, the server must specify the header &quot;Access-Control-Allow-Credentials: true&quot; and the &quot;Access-Control-Allow-Origin&quot; header must be set to null or the malicious page&#39;s domain. Even if this misconfiguration doesn&#39;t allow authenticated AJAX requests, unauthenticated sensitive content can still be accessed (e.g intranet websites).</div>
-							<br />
-						
-							<div>A malicious page can belong to a malicious website but also a trusted website with flaws (e.g XSS, support of HTTP without TLS allowing code injection through MITM, etc).</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com">https://manuelaklenke.com</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">origin: https://wpNWTIuG.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/">https://manuelaklenke.com/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">origin: https://wpNWTIuG.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/about">https://manuelaklenke.com/about</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/about</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">origin: https://wpNWTIuG.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/apple-touch-icon.png">https://manuelaklenke.com/apple-touch-icon.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/apple-touch-icon.png</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">origin: https://wpNWTIuG.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">origin: https://wpNWTIuG.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					
-					<td width="80%">Systemic</td>
-					
-					
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>If a web resource contains sensitive information, the origin should be properly specified in the Access-Control-Allow-Origin header. Only trusted websites needing this resource should be specified in this header, with the most secured protocol supported.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS</a>
-							<br />
-						
-							<a href="https://portswigger.net/web-security/cors">https://portswigger.net/web-security/cors</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/942.html">942</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">14</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/40040/">40040</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
 		
 			<table class="results">
 				<tr height="24">
@@ -1407,12 +1154,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/about">https://manuelaklenke.com/about</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/about</td>
+						<td width="80%">https://manuelaklenke.com/contact</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1446,12 +1193,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1670,6 +1417,45 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://manuelaklenke.com/apple-touch-icon.png">https://manuelaklenke.com/apple-touch-icon.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://manuelaklenke.com/apple-touch-icon.png</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+							<div>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</div>
+							
+						</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://manuelaklenke.com/favicon.svg">https://manuelaklenke.com/favicon.svg</a></td>
 					</tr>
 					<tr>
@@ -1715,45 +1501,6 @@ td {
 						<td width="20%"
 							class="indent2">Node Name</td>
 						<td width="80%">https://manuelaklenke.com/robots.txt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Access-Control-Allow-Origin: *</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">
-							<div>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</div>
-							
-						</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/sitemap.xml">https://manuelaklenke.com/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/sitemap.xml</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1861,54 +1608,6 @@ td {
 						<td width="20%"
 							class="indent2">Node Name</td>
 						<td width="80%">https://manuelaklenke.com</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%">TRACE, OPTIONS methods with &#39;Max-Forwards&#39; header. TRACK method.</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">
-							<div>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:</div>
-							<br />
-						
-							<div>- Vercel</div>
-							<br />
-						
-							<div>The following web/application server has been identified:</div>
-							<br />
-						
-							<div>- Vercel</div>
-							
-						</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/">https://manuelaklenke.com/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2092,6 +1791,54 @@ td {
 						</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%">TRACE, OPTIONS methods with &#39;Max-Forwards&#39; header. TRACK method.</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+							<div>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:</div>
+							<br />
+						
+							<div>- Vercel</div>
+							<br />
+						
+							<div>The following web/application server has been identified:</div>
+							<br />
+						
+							<div>- Vercel</div>
+							
+						</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
 					
@@ -2232,12 +1979,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/about">https://manuelaklenke.com/about</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/about</td>
+						<td width="80%">https://manuelaklenke.com/contact</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2268,12 +2015,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2468,12 +2215,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/about">https://manuelaklenke.com/about</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/about</td>
+						<td width="80%">https://manuelaklenke.com/contact</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2504,12 +2251,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2701,12 +2448,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2809,8 +2556,8 @@ td {
 				<tr>
 					<td width="20%">Instances</td>
 					
+					<td width="80%">Systemic</td>
 					
-					<td width="80%">5</td>
 					
 				</tr>
 				<tr>
@@ -2940,12 +2687,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3048,8 +2795,8 @@ td {
 				<tr>
 					<td width="20%">Instances</td>
 					
+					<td width="80%">Systemic</td>
 					
-					<td width="80%">5</td>
 					
 				</tr>
 				<tr>
@@ -3283,12 +3030,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/about">https://manuelaklenke.com/about</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/about</td>
+						<td width="80%">https://manuelaklenke.com/contact</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3322,12 +3069,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/contact">https://manuelaklenke.com/contact</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/contact</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3524,12 +3271,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/portfolio">https://manuelaklenke.com/portfolio</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com/events">https://manuelaklenke.com/events</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/portfolio</td>
+						<td width="80%">https://manuelaklenke.com/events</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3694,12 +3441,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/">https://manuelaklenke.com/</a></td>
+						<td width="80%"><a href="https://manuelaklenke.com">https://manuelaklenke.com</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/</td>
+						<td width="80%">https://manuelaklenke.com</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3719,7 +3466,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 518121</td>
+						<td width="80%">Age: 603647</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3758,7 +3505,46 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 518123</td>
+						<td width="80%">Age: 603645</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+							<div>The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</div>
+							
+						</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://manuelaklenke.com/apple-touch-icon.png">https://manuelaklenke.com/apple-touch-icon.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://manuelaklenke.com/apple-touch-icon.png</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 297192</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3797,7 +3583,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 487626</td>
+						<td width="80%">Age: 603647</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3836,46 +3622,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 71406</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">
-							<div>The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</div>
-							
-						</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/sitemap.xml">https://manuelaklenke.com/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/sitemap.xml</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 494346</td>
+						<td width="80%">Age: 603644</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4035,6 +3782,42 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://manuelaklenke.com/apple-touch-icon.png">https://manuelaklenke.com/apple-touch-icon.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://manuelaklenke.com/apple-touch-icon.png</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://manuelaklenke.com/favicon.svg">https://manuelaklenke.com/favicon.svg</a></td>
 					</tr>
 					<tr>
@@ -4077,42 +3860,6 @@ td {
 						<td width="20%"
 							class="indent2">Node Name</td>
 						<td width="80%">https://manuelaklenke.com/robots.txt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://manuelaklenke.com/sitemap.xml">https://manuelaklenke.com/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Node Name</td>
-						<td width="80%">https://manuelaklenke.com/sitemap.xml</td>
 					</tr>
 					<tr>
 						<td width="20%"
