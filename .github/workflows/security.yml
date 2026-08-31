@@ -1,14 +1,9 @@
 name: OWASP ZAP Security Scan
 
-run-name: >-
-  ${{ github.event_name == 'workflow_dispatch' && 'OWASP ZAP Security Scan — manual run' ||
-      github.event_name == 'schedule' && 'OWASP ZAP Security Scan — nightly run' ||
-      'OWASP ZAP Security Scan' }}
+run-name: OWASP ZAP Security Scan — manual run
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 7 * * *'
 
 permissions:
   contents: write
